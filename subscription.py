@@ -79,3 +79,29 @@ if (test == 'Continue'):
         length =input('For how long?, one (month) or two (weeks)?')
         length_response = length
         print(length)
+        if (length_response == 'one'):
+            
+            time.sleep(5) #for demo in class
+            user_email = 'c22oding@gmail.com'
+            subject = 'Trial-End Reminder'
+            sub_provider = sender
+            message = "Hello Mercy,\n\n This is a friendly reminder that your month-long free trial from " + sub_provider + " ends today.\n\n Best, \n\n Subscription Management Team"
+
+            msg =MIMEMultipart()
+            msg['To'] = user_email
+            msg['From'] = user_email
+            msg['Subject'] = subject
+            msg['Body'] = message
+
+            msg.attach(MIMEText(message,'plain'))
+
+            
+            server = smtplib.SMTP('smtp.gmail.com',587)
+            server.starttls()
+            server.login(config.user,config.password)
+            text = msg.as_string()
+            server.sendmail(config.user,config.user,text)
+            server.quit()
+            #send_time = one_month_reminder
+            #time.sleep(send_time.timestamp() - time.time())  #to set an actual reminder remember to del the timesleep from demo (line 91)
+            print('email sent')
