@@ -48,3 +48,28 @@ To install the file:
 #Copy right & licensing
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
+#Testing & Bugs
+
+
+
+#Acknowledgements & credits
+https://stackoverflow.com/questions/52022134/how-do-i-schedule-an-email-to-send-at-a-certain-time-using-cron-and-smtp-in-pyt
+https://stackoverflow.com/questions/52326434/mails-send-if-condition-is-true-using-python-code
+https://automatetheboringstuff.com/chapter16/
+https://stackoverflow.com/questions/1790795/parsing-date-with-timezone-from-an-email
+https://www.youtube.com/watch?v=YPiHBtddefI
+https://developers.google.com/gmail/api/v1/reference/users/messages/send
+https://pymotw.com/3/imaplib/
+https://www.youtube.com/watch?v=bbPwv0TP2UQ&t=490s
+https://www.afternerd.com/blog/python-string-contains/
+https://www.youtube.com/watch?v=bbPwv0TP2UQ&t=490s
+https://www.youtube.com/channel/UCBwpMr85NLRe4RmfE6jTRnw
+https://stackoverflow.com/questions/41538112/how-to-print-the-subject-of-a-single-email-using-uid
+https://stackoverflow.com/questions/12944727/python-imaplib-view-message-to-specific-sender 
+https://stackoverflow.com/questions/181530/styling-multi-line-conditions-in-if-statements
+https://stackoverflow.com/questions/35423564/how-can-i-store-a-result-of-a-function-in-a-variable-in-python 
+https://stackoverflow.com/questions/6871016/adding-5-days-to-a-date-in-python
+https://stackoverflow.com/questions/1790795/parsing-date-with-timezone-from-an-email
+https://www.youtube.com/watch?v=1RnU4wCiZuI
+https://www.youtube.com/watch?v=gu_J5FVO-8k
+https://stackoverflow.com/questions/19511440/add-b-prefix-to-python-variable 
