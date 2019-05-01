@@ -53,17 +53,16 @@ Pip
 & packages listed under configuration
 
 #Testing & Bugs
+Running automated with tests pytest is a challenge because of the input function that interupts the test. Testing should therefore be done by inputing on command line and running. An automated test can be ran on the section before the inputs, but most of that section is string. Only calculations performed were with dates, that can be checked with a simple interval function. 
 
+#Deployment
+App not yet deployed but code available on Github
 
 #Authors
 Mercy Radithupa 
 
 #Copy right & licensing
 This project is licensed under the MIT License - see the LICENSE.md file for details
-
-
-
-
 
 #Acknowledgements & credits
 https://stackoverflow.com/questions/52022134/how-do-i-schedule-an-email-to-send-at-a-certain-time-using-cron-and-smtp-in-pyt
