@@ -57,4 +57,15 @@ OD= order_date_date
 one_month_reminder = OD + datetime.timedelta(days= + 29)
 two_week_reminder = OD + datetime.timedelta(days= + 13)
 #print(one_month_reminder.strftime("%Y-%m-%d"))
-print(two_week_reminder.strftime("%Y-%m-%d"))
+#print(two_week_reminder.strftime("%Y-%m-%d"))
+#==============CHECK EMAIL CONTENT FOR KEY WORD============
+#my_str = "free trial"
+#my_byte = my_str.encode
+def check():
+    if ( b'free trial' in body):
+        return "Continue"
+    else:
+        print("No free trial")
+
+test = check()
+print(test)
