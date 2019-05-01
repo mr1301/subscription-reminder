@@ -46,3 +46,15 @@ sender = raw_email['From']
 #print(body)
 #print(date)
 #print(sender)
+#=================FORMAT THE DATE TO ENSURE COMPATABILITY=============
+date_str= 'Sun, 28 Apr 2019 22:44:14 -0400'
+email= parsedate_to_datetime(date_str)
+order_date_str =email.strftime("%Y-%m-%d")
+order_date_date= datetime.datetime.strptime(order_date_str,"%Y-%m-%d")
+#print (order_date_date.date())
+#print(type(order_date_date))
+OD= order_date_date
+one_month_reminder = OD + datetime.timedelta(days= + 29)
+two_week_reminder = OD + datetime.timedelta(days= + 13)
+#print(one_month_reminder.strftime("%Y-%m-%d"))
+print(two_week_reminder.strftime("%Y-%m-%d"))
