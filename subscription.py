@@ -22,3 +22,18 @@ def get_body(msg):
         return get_body(msg.get_payload(0))
     else: 
         return msg.get_payload(None,True)
+#==============ESTABLISH CONNECTION, LOGIN & RETRIEVE MESSAGES==========
+
+mail = imaplib.IMAP4_SSL('imap.gmail.com')
+mail.login(config.user,config.password)
+mail.list()
+mail.select('inbox')
+mail.list()
+mail.select("inbox") # connect to inbox.
+result, data = mail.search(None, "ALL")
+ids = data[0] # data is a list.
+id_list = ids.split() # ids is a space separated string
+latest_email_id = id_list[-1] # get the latest
+
+result, data = mail.fetch(latest_email_id, "(RFC822)") # fetch the email body (RFC822) for the given ID
+raw_email = email.message_from_bytes(data[0][1]) # here's the body
