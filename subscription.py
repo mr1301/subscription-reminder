@@ -37,3 +37,12 @@ latest_email_id = id_list[-1] # get the latest
 
 result, data = mail.fetch(latest_email_id, "(RFC822)") # fetch the email body (RFC822) for the given ID
 raw_email = email.message_from_bytes(data[0][1]) # here's the body
+
+#===============PULL OUT EMAIL OBJECTS NEEDED========================
+body = get_body(raw_email)
+date = raw_email['Date']
+sender = raw_email['From']
+#print(raw_email['Date'])
+#print(body)
+#print(date)
+#print(sender)
