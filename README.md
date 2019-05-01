@@ -1,2 +1,2 @@
-# subscription-reminder
-Send me reminders on email for free trial ends on my subscriptions
+Subscription Reminder
+This app will help you remember to cancel your free-trial online subscriptions before payment day by reading your incoming emails, identifying free-trial confirmations and sending you reminders before the free trial ends.
