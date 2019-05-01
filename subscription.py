@@ -69,3 +69,13 @@ def check():
 
 test = check()
 print(test)
+#=========================Confirm Subcription & Run Logic================
+
+if (test == 'Continue'):
+    subscription = input("(yes/no). Is this a subscription order you made?")
+    sub_response = subscription
+    print(sub_response)
+    if (sub_response == 'yes'):
+        length =input('For how long?, one (month) or two (weeks)?')
+        length_response = length
+        print(length)
