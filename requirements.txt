@@ -1,1 +1,162 @@
-add requirements here
+
+Problem Statement
+Online services have allowed millions of internet users across the globe to access free services
+online through subscription trials. The marketing gambit is a bet that after some length of use the
+consumer will be drawn to the service enough to allow an automatic paid-subscription renewal,
+and if not that they will forget to end their free trial and incur an automatic charge. Many
+consumers find themselves every month with bills of subscription services they even don't recall
+using. This is exacerbated by the fact that subscription payments often fall on different days of
+the month, with varying amounts, making them even harder for customers to track. To add to the
+problem, canceling the subscription is often characterized by going over multiple customer
+service pages to access the cancellation option. At the most extreme, consumers aren't able to
+cancel some periodicals without calling the company, meaning, in the end, consumers lose
+money, time and sometimes even energy talking themselves out of the service with eager
+customer reps.
+
+User Needs
+College students rank highly among populations trying multiple free subscriptions on
+periodicals, media content providers, and other novel services. Driven often by the desire to stay
+updated on media content, take advantage of student discounts, and minimize entertainment
+costs, students have fallen victim to excessive and passive subscription charges that defeat the
+point of using the free trial, to begin with. The impacts are of course that students end up losing
+the very money they were trying to save in addition to the time-lost and distress.
+Given this problem, students and online subscription customers using free trials need a service
+that automatically logs the end-date of the subscription on their calendars, and sends them a
+reminder prior to or on this date to cancel the subscription or let it passively charge their
+accounts. Such a reminder need have attached a link to the cancellation page or account. Such a
+service would ensure students didn't lose money and time to services they find valueless. In
+addition, this will provide further credibility to online subscriptions because they would have
+been actively consented to by a client, as opposed to passively.
+
+Current State Processes
+Currently, subscription process is as follows:
+● Consumers hears of a new services or content they might be interested in
+● Consumer access content site
+● Consumer is offered multiple subscription packages that all begin with free trial
+● Consumer picks package or consumer leaves site
+● Time passes
+● Consumer may or may not be using service
+● Consumer is charged
+● Consumer decides if service is valuable or valueless
+● Consumer cancels or consumer continues use
+
+Evaluation
+The greatest pain point right now is that whether a user uses the services or doesn’t they get charged
+because they did not cancel before payment was due. To address this pain point the evaluation of whether
+a service is valuable or not should come before the charge is levied -- a reminder could help move that
+evaluation to a stage prior to the payment.
+
+Potential Solutions
+
+Solution 1
+One solution is for students and other users to set alarms on their phones to remind them of their
+cancellation dates. Once implemented, this solution would be very effective. However, it is
+unlikely to have a high adoption rate. Most students have alarm capabilities on their phones, but
+still don’t enter the dates manually. The process is tedious in the long run, requires discipline,
+and requires two devices for the execution on one tasks (because most students and users set 
+alarms on their phones, but often subscribe to content and consume subscription-worthy content
+on computers).
+
+Solution 2
+Another option is for companies to send consumers an email reminder on the day the free-trial
+ends. This would be the most effective way to ensure the transaction was active from the
+consumer’s standpoint. However, most companies realize that this will lead to higher numbers of
+potential users terminating their contracts when the free-trial ends, especially those that didn’t
+use the service much.
+
+Solution 3
+Apart from companies sending this email to users, users can design an app that automatically
+logs the end of a free trial or beginning of a payment period from the user’s subscription
+confirmation email, and sends the user a reminder on the trial-end date to continue subscription
+or cancel. This would be similar to the alarm, but not tedious at all, the reminder could also
+provide a cancellation or continuation link. This method wouldn’t rely on content providers with
+opposing interest for a reminder, but it would require some python coding, and for the
+confirmation email to have the date.
+
+Solution 4
+Lastly, and apart from reminders, online service providers can make it such that the contract
+doesn’t automatically renew, and the consumer can opt into renewing as opposed to opting out of
+renewing after free-trial ends.
+
+Proposed Solution
+I recommend adopting solution 3 -- developing an app that pulls the trial-end date from the
+subscription confirmation email and sends the user a reminder on that date. This solution can be
+implemented with basic python capabilities, it allows the user to act independently and
+responsibly without imposing tedious tasks. It also allows content providers to pursue their
+interests of gaining more users without sabotaging themselves by reminding users to cancel or
+continue. In short, it’s the most pragmatic and realistic solution.
+
+Future State Processes
+Recommended subscription process is as follows:
+● Consumers hears of a new services or content they might be interested in
+● Consumer access content site
+● Consumer is offered multiple subscription packages that all begin with free trial
+● Consumer picks package or consumer leaves site
+● Time passes
+● Consumer may or may not be using service
+● Consumer receives trial-end reminder
+● Consumer decides if service is valuable or valueless
+● Consumer cancels or consumer continues use
+● Consumer is charged
+
+System Objectives
+1. The system should be able to read student emails continuously
+2. Should be able to identify confirmation emails from subscriptions
+3. Should be able to pull out the trial-end date or calculate it given email date
+4. Should be able to send student email reminder on the trial-end date with link to cancel
+
+Functionality Requirements
+
+Inputs
+Objectives 1 and 2 cover inputs. For objective 1 the main source of data is the student’s email
+account or in this case Gmail account. When the app is in use, it will check all emails
+conditionally, that condition will be that they be subscription confirmation emails. Objective 2 is
+more granular on what the input is, the main input keys will be the name of the subscription
+provider, email receipt date, length of trial, or simply end-date if available, and the link to the
+subscription provider’s website. All this information will be pulled from the subcription
+confirmation email.
+
+Processing/ Information system
+Processing will be covered mostly by Objective 3. If the email is a confirmation email, the trialend date is logged, if the trial-end date is not explicitly stated, a function calculates the end date
+using the email receipt date and the stated length of trial. A reminder message that reads “ Your
+trial-end date for XYZ is today, choose to continue or cancel!” is crafted, and on the date on the
+trial-end the email is sent automatically as an execution of the code.
+
+Outputs
+The output is mostly covered by objective 4. On the day of the trial-end, the user will get a
+notification, in the form of an email. They content of the email, will read “Hey there, your trialend date for [insert subscription provider name] is today, choose to continue or cancel!” The
+word cancel will be a link to the website. The email will remain simplistic with a sign-out that
+says “Best, Your Subscription Management Team.” The output will contain no media graphics
+to avoid complimenting or undercutting the subscription provider’s marketing, but also to ensure
+it remains a simple reminder that doesn’t spam the user with needless information or content so
+as to demonstrate loyalty to the student’s needs.
+
+Information Requirements
+The inputs collected from the email: name of provider, trial-end date, provider site, will come in
+the form of string and date types. When processing the data the date calculations may require
+conversion of dates into integers or floats to ensure the calculations are right and the email is sent
+out on the correct date. The output that the student sees will all be string, and some of that string
+will be a link to the subscription provider. Once the student makes the decision to continue or
+cancel the subscription their interaction with the app will be over, they will either be directed to
+another site or can simply close the email.
+
+Below is an information flow chart for the system:
+Interface Requirements
+Users will interact with system from their Gmail inbox, the email account on which they will get
+notifications will be the same email account they provided the subscription company. The
+interaction will last about 10 seconds, and will consist of a short text message and link. Despite
+such a short interaction, the experience will provide the user grate relief, and save them money.
+Below is an example of the interface:
+
+Technology Requirements
+The app will require the use of the Gmail API which will be read from Python. The API will
+allow me access to the user’s email to get the input keys, and also access to the users email to
+send the notification at the trial-end date.
+I will also use the Requests package to access the subscription providers website, which will be
+offered to the user as a link to cancel on the output email. I will also need an environment
+variable manager to keep the API key safe, for this I will use the dotenv package and access my
+environments with the os module.
+The system will not need any hardware besides my computer. However, because the app must
+continuously read the emails, it will be deployed to Heroku. 
+
+Link to PDF that has graphs: file:///Users/zach/Downloads/M.Radithupa%20Project%20Requirements%20%20(1).pdf 

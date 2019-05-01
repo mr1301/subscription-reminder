@@ -44,11 +44,24 @@ To install the file:
   Config.py - this file will contain your email and password
   Subscription.py - this file contains the application code
   my_test.py
-  
+
+#Built with
+Anaconda
+Mac Terminal
+Python
+Pip
+& packages listed under configuration
+
+#Testing & Bugs
+
+
+#Authors
+Mercy Radithupa 
+
 #Copy right & licensing
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
-#Testing & Bugs
+
 
 
 
