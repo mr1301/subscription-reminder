@@ -134,3 +134,12 @@ if (test == 'Continue'):
                 #send_time = one_month_reminder
                 #time.sleep(send_time.timestamp() - time.time())  #to set an actual reminder remember to del the timesleep from demo (line 120)
                 print("Email sent")
+            else:
+                print("Reminders available for one month & two weeks only")
+       
+    else:
+        print("Message is free-trial but is not Mercy's subsciption")
+
+else:
+    print("This message doesn't contain a free trial confirmation")    
+       
