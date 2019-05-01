@@ -1,7 +1,7 @@
-Subscription Reminder
+#Subscription-Reminder
 This app will help you remember to cancel your free-trial online subscriptions before payment day by reading your incoming emails, identifying free-trial confirmations and sending you reminders before the free trial ends.
 
-Configuration
+#Configuration
 
 Rerequisites
 To use this app you will need to provide an email from which you receive your subscription emails.
@@ -31,3 +31,20 @@ To test the code a different sleep time was used for the reminder. When using ap
   Step 1. use current sleep time demo to check if the app works.
   step 2. comment out the demo sleep time and let the app set reminder
   step 3. check email on day of reminder
+
+#Installation
+To install the file:
+  1.Download the repository from Github
+  2.Follow the configuration instructions from the READme using your on your command line.
+
+#Files
+  READme.md
+  LICENSE.md
+  Requirements.txt - this file contains a description of the app and it's functionality
+  Config.py - this file will contain your email and password
+  Subscription.py - this file contains the application code
+  my_test.py
+  
+#Copy right & licensing
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
